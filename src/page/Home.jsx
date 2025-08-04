@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Trang chủ - My Shop</title>
+        <title>Trang chủ</title>
         <meta name="description" content="Chào mừng bạn đến với trang chủ My Shop." />
         <link rel="canonical" href="https://example.com/" />
       </Helmet>
@@ -33,101 +33,65 @@ const Home = () => {
           tiết mới nhất cho công việc này ngay bài viết dưới đây.
         </p>
 
-        <div className="relative overflow-x-auto mt-10">
+        {/* Bảng giá phá dỡ trọn gói */}
+        <div className="relative overflow-x-auto">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-blue-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" className="px-6 py-3">
-                  STT
+                <th scope="col" className="px-6 py-4 font-semibold">
+                  Loại công trình
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Hạng mục phá dỡ nhà
+                <th scope="col" className="px-6 py-4 font-semibold">
+                  Diện tích (m²)
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Đơn vị
+                <th scope="col" className="px-6 py-4 font-semibold">
+                  Đơn giá trọn gói (VNĐ/m²)
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Đơn giá (VNĐ)
+                <th scope="col" className="px-6 py-4 font-semibold">
+                  Ghi chú
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  1
-                </th>
-                <td className="px-6 py-4">Phá dỡ tường 110</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Nhà cấp 4 (1 tầng)
+                </td>
+                <td className="px-6 py-4">Dưới 100m²</td>
+                <td className="px-6 py-4 text-red-600 font-semibold">180.000 - 220.000</td>
+                <td className="px-6 py-4 text-sm">Bao gồm dọn dẹp</td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  2
-                </th>
-                <td className="px-6 py-4">Phá cầu thang</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Nhà 2-3 tầng
+                </td>
+                <td className="px-6 py-4">100-200m²</td>
+                <td className="px-6 py-4 text-red-600 font-semibold">200.000 - 280.000</td>
+                <td className="px-6 py-4 text-sm">Tùy độ phức tạp</td>
               </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  3
-                </th>
-                <td className="px-6 py-4">Phá móng bê tông (dạng khối)</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Nhà 4-5 tầng
+                </td>
+                <td className="px-6 py-4">200-400m²</td>
+                <td className="px-6 py-4 text-red-600 font-semibold">250.000 - 350.000</td>
+                <td className="px-6 py-4 text-sm">Cần thiết bị chuyên dụng</td>
               </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  4
-                </th>
-                <td className="px-6 py-4">Phá móng bê tông (dạng khối)</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Nhà xưởng
+                </td>
+                <td className="px-6 py-4">Trên 400m²</td>
+                <td className="px-6 py-4 text-red-600 font-semibold">150.000 - 200.000</td>
+                <td className="px-6 py-4 text-sm">Giá ưu đãi diện tích lớn</td>
               </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  5
-                </th>
-                <td className="px-6 py-4">Phá móng bê tông (dạng khối)</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
-              </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  6
-                </th>
-                <td className="px-6 py-4">Phá móng bê tông (dạng khối)</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
-              </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  7
-                </th>
-                <td className="px-6 py-4">Phá móng bê tông (dạng khối)</td>
-                <td className="px-6 py-4">m²</td>
-                <td className="px-6 py-4">100.000 đ</td>
+              <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50">
+                <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Công trình khó tiếp cận
+                </td>
+                <td className="px-6 py-4">Tùy quy mô</td>
+                <td className="px-6 py-4 text-red-600 font-semibold">Báo giá theo yêu cầu</td>
+                <td className="px-6 py-4 text-sm">Cần khảo sát thực tế</td>
               </tr>
             </tbody>
           </table>
@@ -259,19 +223,11 @@ const Home = () => {
 
         {/* Phần bảng giá phá dỡ nhà cũ trọn gói */}
         <div className="mt-16">
-          <div className="flex items-center justify-center mb-8">
-            <span className="hidden sm:inline-block w-12 h-px bg-blue-600 mr-3" />
-            <span className="bg-blue-600 text-white text-sm sm:text-base font-bold px-4 py-2 uppercase rounded-sm">
-              Báo giá trọn gói
-            </span>
-            <span className="hidden sm:inline-block w-12 h-px bg-blue-600 ml-3" />
-          </div>
-
           <h2 className="text-xl sm:text-2xl font-bold text-blue-700 mb-6 text-center">
-            Bảng giá phá dỡ nhà cũ trọn gói tại TP HCM
+            Phá dỡ nhà cũ trọn gói tại TP HCM
           </h2>
 
-          <div className="mb-8">
+          <div className="mb-8 text-left">
             <p className="text-gray-800 leading-relaxed mb-4">
               <strong>Giá phá dỡ nhà cũ</strong> trọn gối toàn bộ công trình sẽ bao gồm toàn bộ chi phí tháo dỡ công trình, dọn dẹp và bàn giao công trình cho khách hàng. Giá sẽ được tính theo mét vuông nhân với tổng diện tích công trình.
             </p>
@@ -299,70 +255,43 @@ const Home = () => {
               Hình ảnh máy xúc chuyên dụng phá dỡ nhà cũ tại TP HCM
             </p>
           </div>
-
-          {/* Bảng giá phá dỡ trọn gói */}
-          <div className="relative overflow-x-auto">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-              <thead className="text-xs text-gray-700 uppercase bg-blue-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" className="px-6 py-4 font-semibold">
-                    Loại công trình
-                  </th>
-                  <th scope="col" className="px-6 py-4 font-semibold">
-                    Diện tích (m²)
-                  </th>
-                  <th scope="col" className="px-6 py-4 font-semibold">
-                    Đơn giá trọn gói (VNĐ/m²)
-                  </th>
-                  <th scope="col" className="px-6 py-4 font-semibold">
-                    Ghi chú
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                    Nhà cấp 4 (1 tầng)
-                  </td>
-                  <td className="px-6 py-4">Dưới 100m²</td>
-                  <td className="px-6 py-4 text-red-600 font-semibold">180.000 - 220.000</td>
-                  <td className="px-6 py-4 text-sm">Bao gồm dọn dẹp</td>
-                </tr>
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                    Nhà 2-3 tầng
-                  </td>
-                  <td className="px-6 py-4">100-200m²</td>
-                  <td className="px-6 py-4 text-red-600 font-semibold">200.000 - 280.000</td>
-                  <td className="px-6 py-4 text-sm">Tùy độ phức tạp</td>
-                </tr>
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                    Nhà 4-5 tầng
-                  </td>
-                  <td className="px-6 py-4">200-400m²</td>
-                  <td className="px-6 py-4 text-red-600 font-semibold">250.000 - 350.000</td>
-                  <td className="px-6 py-4 text-sm">Cần thiết bị chuyên dụng</td>
-                </tr>
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                    Nhà xưởng
-                  </td>
-                  <td className="px-6 py-4">Trên 400m²</td>
-                  <td className="px-6 py-4 text-red-600 font-semibold">150.000 - 200.000</td>
-                  <td className="px-6 py-4 text-sm">Giá ưu đãi diện tích lớn</td>
-                </tr>
-                <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
-                    Công trình khó tiếp cận
-                  </td>
-                  <td className="px-6 py-4">Tùy quy mô</td>
-                  <td className="px-6 py-4 text-red-600 font-semibold">Báo giá theo yêu cầu</td>
-                  <td className="px-6 py-4 text-sm">Cần khảo sát thực tế</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="mb-8 text-center">
+            <img
+              src="https://cly.1cdn.vn/thumbs/720x480/2025/05/09/z6583920164759_03161693a5c5eb49d4f2571af75bcc75(1).jpg"
+              alt="các công nhân đang vận chuyển tôn"
+              className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+            />
+            <p className="text-sm text-gray-600 mt-3 italic">
+              Hình ảnh các công nhân đang vận chuyển tôn
+            </p>
           </div>
+          <div className="mb-8 text-center">
+            <img
+              src="https://newhome24h.com/wp-content/uploads/2023/07/thao-do-nha-cu.jpg"
+              alt="ảnh tháo dỡ nhà cũ tại TP HCM"
+              className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+            />
+            <p className="text-sm text-gray-600 mt-3 italic">
+              Hình ảnh phá dỡ nhà cũ tại TP HCM
+            </p>
+          </div>
+          <div className="bg-white p-4 shadow-md rounded">
+            <h2 className="text-lg font-bold text-blue-600 mb-1">DANH MỤC NỔI BẬT</h2>
+            <div className="w-8 border-b-2 border-gray-400 mb-4" />
+
+            <ul className="divide-y divide-gray-200 text-sm">
+              <li className="bg-gray-50 py-3 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer">
+                PHÁ DỠ NHÀ
+              </li>
+              <li className="bg-gray-50 py-3 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer">
+                PHÁ DỠ CÔNG TRÌNH
+              </li>
+              <li className="bg-gray-50 py-3 px-4 text-blue-600 hover:bg-gray-100 cursor-pointer">
+                THU MUA XÁC NHÀ
+              </li>
+            </ul>
+          </div>
+
           <a
             href="tel:0382520045"
             className="fixed bottom-4 left-4 z-50 flex items-center bg-yellow-400 text-white font-bold rounded-full shadow-lg overflow-hidden hover:scale-105 transition-transform"
@@ -392,7 +321,7 @@ const Home = () => {
           </a>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

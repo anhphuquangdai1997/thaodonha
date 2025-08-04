@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../assets/logo.png'
 
 const Footer = () => {
     return (
@@ -6,7 +7,14 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Cột 1: Thông tin công ty */}
                 <div>
-                    <h2 className="text-xl font-bold uppercase mb-3">Phá dỡ nhà Tân Tiến Phát</h2>
+                    <div className='flex items-center'>
+                        <img
+                            src={logo}
+                            className="h-16 w-24"
+                            alt="Flowbite Logo"
+                        />
+                        <h2 className="text-xl font-bold uppercase mb-3">Phá dỡ nhà Văn Tú</h2>
+                    </div>
                     <p className="mb-4">
                         Chuyên cung cấp giải pháp phá dỡ hiệu quả và thu mua xác nhà linh hoạt,
                         đảm bảo chất lượng và an toàn trên mọi công trình
@@ -17,7 +25,7 @@ const Footer = () => {
                     </p>
                     <p className="flex items-center gap-2 mb-2">
                         <span>📱</span>
-                        Hotline: 0976.999.776 - Tân Tiến Phát
+                        Hotline: 0976.999.776 - Văn Tú
                     </p>
                     <p className="flex items-center gap-2">
                         <span>📧</span>
