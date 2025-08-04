@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import 'flowbite';
 import App from './App.jsx'
 import { HelmetProvider } from 'react-helmet-async';
-import "flowbite";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
