@@ -21,7 +21,7 @@ const Footer = () => {
                     </p>
                     <p className="flex items-center gap-2 mb-2">
                         <span>📍</span>
-                        Địa chỉ: 30/66 Đỗ Nhuận, Phường Sơn Kỳ, Quận Tân Phú, TP.HCM
+                        Địa chỉ: 237 phạm văn Chiêu,quận Gò Vấp, TP.HCM
                     </p>
                     <p className="flex items-center gap-2 mb-2">
                         <span>📱</span>
