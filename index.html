@@ -1,12 +1,225 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+      content="Dịch vụ tháo dỡ chuyên nghiệp - Liên hệ ngay 0382.520.045" />
     <title>Tháo dỡ</title>
+    <style>
+      /* Hotline styles */
+      .hotline-phone-ring-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999999;
+      }
+
+      .hotline-phone-ring {
+        position: relative;
+        background-color: transparent;
+        width: 110px;
+        height: 110px;
+        cursor: pointer;
+        display: block;
+      }
+
+      .hotline-phone-ring-circle {
+        width: 85px;
+        height: 85px;
+        top: 10px;
+        left: 10px;
+        position: absolute;
+        border: 2px solid #e60808;
+        border-radius: 100%;
+        animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+        opacity: 0.5;
+      }
+
+      .hotline-phone-ring-circle-fill {
+        width: 55px;
+        height: 55px;
+        top: 25px;
+        left: 25px;
+        position: absolute;
+        background-color: rgba(230, 8, 8, 0.7);
+        border-radius: 100%;
+        animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+      }
+
+      .hotline-phone-ring-img-circle {
+        background-color: #e60808;
+        width: 33px;
+        height: 33px;
+        top: 37px;
+        left: 37px;
+        position: absolute;
+        border-radius: 100%;
+        animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hotline-phone-ring-img-circle img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .hotline-bar {
+        position: absolute;
+        background: rgba(230, 8, 8, 0.75);
+        height: 40px;
+        width: 180px;
+        line-height: 40px;
+        border-radius: 50px;
+        padding: 0 10px;
+        left: 33px;
+        bottom: 37px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+        cursor: pointer;
+        transition: all 0.8s;
+      }
+
+      .hotline-bar > a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        text-indent: 50px;
+        display: block;
+        font-family: Arial;
+      }
+
+      .hotline-bar > a:hover {
+        color: #fff;
+      }
+      .contact-floating-group {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* khoảng cách giữa zalo và hotline */
+        z-index: 999999;
+      }
+
+      /* Zalo icon */
+      .zalo-float-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #018fe2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .zalo-float-icon img {
+        width: 28px;
+        height: 28px;
+      }
+
+      @media (max-width: 768px) {
+        .hotline-bar {
+          display: none;
+        }
+      }
+
+      @keyframes phonering-alo-circle-anim {
+        0% {
+          transform: scale(0.5);
+          opacity: 0.1;
+        }
+        30% {
+          transform: scale(0.7);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.1;
+        }
+      }
+
+      @keyframes phonering-alo-circle-fill-anim {
+        0%, 100% {
+          transform: scale(0.7);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+      }
+
+      @keyframes phonering-alo-circle-img-anim {
+        0%, 50%, 100% {
+          transform: rotate(0);
+        }
+        10%, 30% {
+          transform: rotate(-25deg);
+        }
+        20%, 40% {
+          transform: rotate(25deg);
+        }
+      }
+
+      /* Zalo icon only for mobile */
+      .zalo-float-icon {
+        position: fixed;
+        bottom: 100px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+        background-color: #018fe2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .zalo-float-icon img {
+        width: 28px;
+        height: 28px;
+      }
+    </style>
   </head>
   <body>
+    <!-- Nút gọi hotline -->
+    <div class="contact-floating-group">
+      <!-- Zalo -->
+      <a href="https://zalo.me/0908541979" target="_blank"
+        class="zalo-float-icon" aria-label="Liên hệ Zalo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/512px-Icon_of_Zalo.svg.png"
+          alt="Zalo">
+      </a>
+
+      <!-- Hotline -->
+      <div class="hotline-phone-ring-wrap">
+        <div class="hotline-phone-ring">
+          <div class="hotline-phone-ring-circle"></div>
+          <div class="hotline-phone-ring-circle-fill"></div>
+          <div class="hotline-phone-ring-img-circle">
+            <a href="tel:0908541979" class="pps-btn-img">
+              <img
+                src="https://nguyenhung.net/wp-content/uploads/2019/05/icon-call-nh.png"
+                alt="Gọi điện thoại">
+            </a>
+          </div>
+        </div>
+        <div class="hotline-bar">
+          <a href="tel:0908541979">0908.541.979</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- React root -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -29,7 +29,7 @@ const Home = () => {
           Thi công phá dỡ nhà, <strong>phá dỡ nhà cũ</strong> luôn cần đến những
           đơn vị chuyên nghiệp, có kinh nghiệm và kỹ thuật chuyên sâu. Do đó,
           bảng báo giá phá dỡ nhà cũ bao nhiêu cũng là một trong những vấn đề mà
-          khách hàng quan tâm. Hãy cùng với Tân Tiến Phát tìm hiểu về mức giá chi
+          khách hàng quan tâm. Hãy cùng với chúng tôi tìm hiểu về mức giá chi
           tiết mới nhất cho công việc này ngay bài viết dưới đây.
         </p>
 
@@ -291,34 +291,6 @@ const Home = () => {
               </li>
             </ul>
           </div>
-
-          <a
-            href="tel:0382520045"
-            className="fixed bottom-4 left-4 z-50 flex items-center bg-yellow-400 text-white font-bold rounded-full shadow-lg overflow-hidden hover:scale-105 transition-transform"
-          >
-            <div className="bg-yellow-500 px-3 py-3 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="white"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="white"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 6.75C2.25 5.231 3.481 4 5 4h.25a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H5a2.25 2.25 0 00-2.25 2.25v4A2.25 2.25 0 005 16.25h.25a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H5c-1.519 0-2.75-1.231-2.75-2.75v-8.5z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6.75 5.25h1.5A.75.75 0 019 6v12a.75.75 0 01-.75.75h-1.5A.75.75 0 016 18V6a.75.75 0 01.75-.75zM10.5 8.25h1.5a.75.75 0 01.75.75v6a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75v-6a.75.75 0 01.75-.75zM14.25 10.5h1.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75V11.25a.75.75 0 01.75-.75z"
-                />
-              </svg>
-            </div>
-            <span className="px-4 py-2">0382.520.045</span>
-          </a>
         </div>
       </section>
       <Footer />

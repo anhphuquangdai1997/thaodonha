@@ -25,7 +25,7 @@ const Footer = () => {
                     </p>
                     <p className="flex items-center gap-2 mb-2">
                         <span>📱</span>
-                        Hotline: 0976.999.776 - Văn Tú
+                        Hotline: 0908.541.979 - Văn Tú
                     </p>
                     <p className="flex items-center gap-2">
                         <span>📧</span>
