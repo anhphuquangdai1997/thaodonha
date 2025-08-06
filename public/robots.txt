@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thaodonha-yqfw.vercel.app/sitemap.xml
+Sitemap: https://thaodonha.vercel.app/sitemap.xml
