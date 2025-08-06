@@ -1,5 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import Footer from './Footer';
+import image1 from '../assets/01.jpg';
+import image2 from '../assets/02.jpg';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
   return (
@@ -106,7 +110,7 @@ const Home = () => {
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-blue-700 mb-8 text-center">
-            Các dịch vụ tháo dỡ nhà cũ tại Tân Tiến Phát
+            Các dịch vụ tháo dỡ nhà cũ tại phá dỡ nhà Văn Tú
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -256,6 +260,23 @@ const Home = () => {
             </p>
           </div>
           <div className="mb-8 text-center">
+            <div className='flex gap-1'>
+              <img
+                src={image1}
+                alt="Máy xúc phá dỡ nhà cũ tại TP HCM"
+                className="w-full md:max-w-sm max-w-[180px] mx-auto rounded-lg shadow-lg"
+              />
+              <img
+                src={image2}
+                alt="Máy xúc phá dỡ nhà cũ tại TP HCM"
+                className="w-full md:max-w-sm max-w-[180px] mx-auto rounded-lg shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-gray-600 mt-3 italic">
+              Hình ảnh phá dỡ các cọc bị lỗi và hoàn thiện lại
+            </p>
+          </div>
+          <div className="mb-8 text-center ">
             <img
               src="https://cly.1cdn.vn/thumbs/720x480/2025/05/09/z6583920164759_03161693a5c5eb49d4f2571af75bcc75(1).jpg"
               alt="các công nhân đang vận chuyển tôn"
@@ -265,7 +286,7 @@ const Home = () => {
               Hình ảnh các công nhân đang vận chuyển tôn
             </p>
           </div>
-          <div className="mb-8 text-center">
+          <div className="mb-8 text-center ">
             <img
               src="https://newhome24h.com/wp-content/uploads/2023/07/thao-do-nha-cu.jpg"
               alt="ảnh tháo dỡ nhà cũ tại TP HCM"
@@ -275,22 +296,34 @@ const Home = () => {
               Hình ảnh phá dỡ nhà cũ tại TP HCM
             </p>
           </div>
-          <div className="bg-white p-4 shadow-md rounded">
-            <h2 className="text-lg font-bold text-blue-600 mb-1">DANH MỤC NỔI BẬT</h2>
+          <div className="bg-white p-2 md:p-4 shadow-md rounded w-full">
+            <h2 className="text-base md:text-lg font-bold text-blue-600 mb-1">
+              DANH MỤC NỔI BẬT
+            </h2>
             <div className="w-8 border-b-2 border-gray-400 mb-4" />
 
             <ul className="divide-y divide-gray-200 text-sm">
-              <li className="bg-gray-50 py-3 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer">
+              <Link
+                to="/one"
+                className="block bg-gray-50 py-3 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer"
+              >
                 PHÁ DỠ NHÀ
-              </li>
-              <li className="bg-gray-50 py-3 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer">
+              </Link>
+              <Link
+                to="/two"
+                className="block bg-gray-50 py-3 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer"
+              >
                 PHÁ DỠ CÔNG TRÌNH
-              </li>
-              <li className="bg-gray-50 py-3 px-4 text-blue-600 hover:bg-gray-100 cursor-pointer">
+              </Link>
+              <Link
+                to="/three"
+                className="block bg-gray-50 py-3 px-4 text-blue-600 hover:bg-gray-100 cursor-pointer"
+              >
                 THU MUA XÁC NHÀ
-              </li>
+              </Link>
             </ul>
           </div>
+
         </div>
       </section>
       <Footer />
